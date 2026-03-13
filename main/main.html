@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebarPanel">
+    <button class="sidebar-close" onclick="closeSidebar()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="profile">
+      <img class="avatar" src="" alt="avatar">
+      <div class="profile-name">Chaichan<br>Klinprasserith</div>
+    </div>
+    <nav class="menu">
+      <a href="#" class="menu-item active">
+        <span class="menu-icon"><i class="fa-regular fa-circle-user"></i></span> ข้อมูลส่วนบุคคล
+      </a>
+      <a href="#" class="menu-item">
+        <span class="menu-icon"><i class="fa-solid fa-clock-rotate-left"></i></span> ประวัติการยืม
+      </a>
+      <a href="#" class="menu-item">
+        <span class="menu-icon"><i class="fa-solid fa-info"></i></span> เกี่ยวกับห้องสมุด
+      </a>
+      <a href="#" class="menu-item">
+        <span class="menu-icon"><i class="fa-regular fa-circle-question"></i></span> คำถามที่พบบ่อย
+      </a>
+    </nav>
+    <a href="/login/login.html" style="text-decoration:none">
+      <div class="logout">Logout</div>
+    </a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="bar">
+    <i id="menuIcon" class="fa-solid fa-list" onclick="openSidebar()"></i>
+    <a href="/main/main.html" style="text-decoration:none">
+      <div class="main">หน้าหลัก</div>
+    </a>
+    <div class="dropdown">แนะนำ
+      <div class="dropdown-menu">
+        <div class="dropdown-content">หนังสือแนะนำประจำวัน</div>
+        <div class="dropdown-content">หนังสือขายดี</div>
+        <div class="dropdown-content">หนังสือใหม่</div>
+      </div>
+    </div>
+    <div class="dropdown">หมวดหมู่
+      <div class="dropdown-menu">
+        <div class="dropdown-content">นิยาย</div>
+        <div class="dropdown-content">พัฒนาตนเอง</div>
+        <div class="dropdown-content">วิทยาศาสตร์</div>
+        <div class="dropdown-content">ประวัติศาสตร์</div>
+        <div class="dropdown-content">การ์ตูน / มังงะ</div>
+      </div>
+    </div>
+    <div class="dropdown">ติดต่อเรา
+      <div class="dropdown-menu">
+        <div class="dropdown-content">อีเมล</div>
+        <div class="dropdown-content">Facebook</div>
+        <div class="dropdown-content">โทรศัพท์</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SEARCH -->
+  <div class="container">
+    <input type="search" id="mySearch" class="search" placeholder="ค้นหาหนังสือหรือผู้แต่ง">
+    <button onclick="myFunction()">ค้นหา</button>
+  </div>
+
+  <!-- 3D SLIDER — span ปิดครบทุกอัน -->
+  <div class="carousel-section">
+    <div class="slider">
+      <span style="--i:0;"><img src="/images/img1.jpg" alt="book1"></span>
+      <span style="--i:1;"><img src="/images/img2.png" alt="book2"></span>
+      <span style="--i:2;"><img src="/images/img3.png" alt="book3"></span>
+      <span style="--i:3;"><img src="/images/img4.png" alt="book4"></span>
+      <span style="--i:4;"><img src="/images/img5.png" alt="book5"></span>
+      <span style="--i:5;"><img src="/images/img6.png" alt="book6"></span>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
