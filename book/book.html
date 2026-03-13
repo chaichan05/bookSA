@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>main</title>
-  <link rel="stylesheet" href="main.css">
+  <title>book</title>
+  <link rel="stylesheet" href="book.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -71,23 +71,14 @@
   </nav>
 
   <div class="container">
-    <input type="search" id="mySearch" class="search" placeholder="ค้นหาหนังสือหรือผู้แต่ง">
-    <button onclick="myFunction()">ค้นหา</button>
-  </div>
- 
+    <input type="search" id="mySearch" class="search" placeholder="ค้นหาหนังสือหรือผู้แต่ง" onkeyup="searchBook()">
 
-  <div class="carousel-section">
-    <div class="slider">
-      <span style="--i:0;"><img src="/images/img1.jpg" alt="book1"></span>
-      <span style="--i:1;"><img src="/images/img2.png" alt="book2"></span>
-      <span style="--i:2;"><img src="/images/img3.png" alt="book3"></span>
-      <span style="--i:3;"><img src="/images/img4.png" alt="book4"></span>
-      <span style="--i:4;"><img src="/images/img5.png" alt="book5"></span>
-      <span style="--i:5;"><img src="/images/img6.png" alt="book6"></span>
-    </div>
+    <button onclick="searchBook()">ค้นหา</button>
   </div>
 
-  <script src="main.js"></script>
+  <div id="searchResult" class="book-grid"></div>
+
+  <script src="book.js"></script>
 </body>
 
 </html>
